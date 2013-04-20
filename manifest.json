@@ -1,0 +1,32 @@
+{
+	"name": "NikeStore Twitter Helper",
+	"manifest_version": 2,
+	"version": "0.1",
+	"background": 
+	{
+		"scripts":
+		[
+			"background.js"
+		]
+	},
+	"content_scripts": [
+    {
+      "matches": ["http://twitter.com/*","https://twitter.com/*","http://store.nike.com/*"],
+      "css": ["mystyles.css"],
+      "js": ["jquery-1.9.0.js", "NikeStore.js"]
+    }],
+	"permissions":
+	[
+		"tabs",
+		"http://*/*",
+		"https://*/*"
+	],
+	"browser_action":
+	{
+		"name": "Click to change the icon's color",
+		"default_title":"title....",
+		"default_badge":"badg",
+		"default_icon":"image/nike2.png"
+	}
+	
+}
